@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALCORE AI | شاپ گرافیک</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Tahoma,Arial,sans-serif;background:#050816;color:#fff;line-height:1.9}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 10%,#123b72 0,transparent 35%),radial-gradient(circle at 90% 80%,#071e45 0,transparent 35%);z-index:-1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;border-bottom:1px solid #18345e;background:#060b1acc;position:sticky;top:0;backdrop-filter:blur(10px)}
+.logo{font-size:25px;font-weight:bold;color:#48baff;letter-spacing:2px}
+nav a{color:#d8eaff;text-decoration:none;margin:0 8px;font-size:14px}
+.hero{text-align:center;padding:90px 8% 70px}
+.badge{display:inline-block;border:1px solid #168cff;border-radius:30px;padding:5px 18px;color:#72caff;margin-bottom:20px}
+h1{font-size:clamp(34px,7vw,72px);line-height:1.3;margin-bottom:20px}
+h1 span{color:#35b8ff;text-shadow:0 0 25px #007bff}
+.hero p{max-width:650px;margin:0 auto 28px;color:#b9cbe4}
+.btn{display:inline-block;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,#087dff,#32d5ff);color:#fff;text-decoration:none;font-weight:bold;margin:6px;box-shadow:0 0 22px #087d5544}
+.btn.alt{background:transparent;border:1px solid #2d8fff}
+section{padding:55px 8%;max-width:1200px;margin:auto}
+.title{text-align:center;margin-bottom:30px;font-size:30px;color:#7dceff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:linear-gradient(145deg,#0e1b35,#091124);border:1px solid #1b4776;border-radius:18px;padding:25px;transition:.2s}
+.card:hover{transform:translateY(-5px);border-color:#38b9ff}
+.card h3{color:#57c6ff;margin-bottom:10px}
+.card p{color:#b3c5dc;font-size:14px}
+.order{background:#0b1730;border:1px solid #24578a;border-radius:20px;text-align:center;padding:35px}
+footer{text-align:center;padding:30px;color:#8ea9c7;border-top:1px solid #18345e;font-size:13px}
+@media(max-width:600px){nav{flex-direction:column;gap:10px}.hero{padding-top:55px}nav a{font-size:12px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">VALCORE AI</div>
+<div><a href="#services">خدمات</a><a href="#portfolio">نمونه‌کار</a><a href="#order">ثبت سفارش</a></div>
+</nav>
+
+<header class="hero">
+<div class="badge">استودیو گرافیک و هوش مصنوعی</div>
+<h1>ایده‌ات را به <span>واقعیت</span> تبدیل کن</h1>
+<p>طراحی لوگو، پوستر، بنر تبلیغاتی و محتوای حرفه‌ای با سبک مدرن، نئونی و سایبرپانک.</p>
+<a class="btn" href="#order">ثبت سفارش</a>
+<a class="btn alt" href="#services">مشاهده خدمات</a>
+</header>
+
+<section id="services">
+<h2 class="title">خدمات ما</h2>
+<div class="grid">
+<div class="card"><h3>طراحی لوگو</h3><p>ساخت لوگوهای اختصاصی و حرفه‌ای برای برندها و پیج‌ها.</p></div>
+<div class="card"><h3>بنر تبلیغاتی</h3><p>بنرهای جذاب برای تبلیغات، فروشگاه‌ها و شبکه‌های اجتماعی.</p></div>
+<div class="card"><h3>طراحی کاور</h3><p>کاور گیمینگ، پروفایل و محتوای دیجیتال با ظاهر خاص.</p></div>
+<div class="card"><h3>VALCORE AI</h3><p>ایده‌پردازی و کمک هوش مصنوعی برای تولید محتوای خلاقانه.</p></div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="title">نمونه‌کارها</h2>
+<div class="grid">
+<div class="card"><h3>هویت بصری</h3><p>طراحی برند با ترکیب مشکی و آبی نئونی.</p></div>
+<div class="card"><h3>پوستر سایبرپانک</h3><p>پوسترهای آینده‌نگر با نورپردازی جذاب.</p></div>
+<div class="card"><h3>پکیج شبکه اجتماعی</h3><p>طراحی مجموعه‌ای هماهنگ برای صفحه شما.</p></div>
+</div>
+</section>
+
+<section id="order">
+<div class="order">
+<h2 class="title">ثبت سفارش</h2>
+<p>برای ثبت سفارش، نوع طراحی و توضیحات موردنیازت را در روبیکا ارسال کن.</p>
+<a class="btn" href="https://rubika.ir/" target="_blank">ارتباط در روبیکا</a>
+<p style="margin-top:15px;color:#91aac8;font-size:13px">لینک روبیکای اختصاصی خودت را می‌توانی جایگزین کنی.</p>
+</div>
+</section>
+
+<footer>© 2026 VALCORE AI — تمامی حقوق محفوظ است.</footer>
+</body>
+</html>
