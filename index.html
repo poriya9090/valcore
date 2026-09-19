@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VALCORE AI | شاپ گرافیک</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Tahoma,Arial,sans-serif;background:#050816;color:#fff;line-height:1.9}
-body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 10%,#123b72 0,transparent 35%),radial-gradient(circle at 90% 80%,#071e45 0,transparent 35%);z-index:-1}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;border-bottom:1px solid #18345e;background:#060b1acc;position:sticky;top:0;backdrop-filter:blur(10px)}
-.logo{font-size:25px;font-weight:bold;color:#48baff;letter-spacing:2px}
-nav a{color:#d8eaff;text-decoration:none;margin:0 8px;font-size:14px}
-.hero{text-align:center;padding:90px 8% 70px}
-.badge{display:inline-block;border:1px solid #168cff;border-radius:30px;padding:5px 18px;color:#72caff;margin-bottom:20px}
-h1{font-size:clamp(34px,7vw,72px);line-height:1.3;margin-bottom:20px}
-h1 span{color:#35b8ff;text-shadow:0 0 25px #007bff}
-.hero p{max-width:650px;margin:0 auto 28px;color:#b9cbe4}
-.btn{display:inline-block;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,#087dff,#32d5ff);color:#fff;text-decoration:none;font-weight:bold;margin:6px;box-shadow:0 0 22px #087d5544}
-.btn.alt{background:transparent;border:1px solid #2d8fff}
-section{padding:55px 8%;max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:30px;font-size:30px;color:#7dceff}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:linear-gradient(145deg,#0e1b35,#091124);border:1px solid #1b4776;border-radius:18px;padding:25px;transition:.2s}
-.card:hover{transform:translateY(-5px);border-color:#38b9ff}
-.card h3{color:#57c6ff;margin-bottom:10px}
-.card p{color:#b3c5dc;font-size:14px}
-.order{background:#0b1730;border:1px solid #24578a;border-radius:20px;text-align:center;padding:35px}
-footer{text-align:center;padding:30px;color:#8ea9c7;border-top:1px solid #18345e;font-size:13px}
-@media(max-width:600px){nav{flex-direction:column;gap:10px}.hero{padding-top:55px}nav a{font-size:12px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALCORE | خدمات رفع تعلیق و پشتیبانی</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Tahoma,Arial,sans-serif;background:#f4f8ff;color:#102040;line-height:1.9}
+    a{text-decoration:none;color:inherit}
+    header{background:#061426;color:#fff;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:10}
+    .logo{font-size:25px;font-weight:bold;letter-spacing:1px;color:#fff}
+    .logo span{color:#1b91ff}
+    nav{display:flex;gap:22px;font-size:14px}
+    nav a:hover{color:#36a5ff}
+    .btn{display:inline-block;background:#168cff;color:white;padding:10px 20px;border-radius:25px;border:0;cursor:pointer;font-weight:bold}
+    .btn.secondary{background:transparent;border:1px solid #168cff;color:#168cff}
+    .hero{background:linear-gradient(120deg,#061426,#0b2850);color:white;padding:75px 7%;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:40px}
+    .hero h1{font-size:clamp(28px,4vw,52px);line-height:1.5;margin:15px 0}
+    .hero h1 span{color:#2198ff}
+    .hero p{color:#d8e7fb;max-width:600px;margin-bottom:25px}
+    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:35px;text-align:center}
+    .hero-card .symbol{font-size:90px;color:#1c9bff}
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:28px 7%;background:white}
+    .trust div{text-align:center;padding:14px;border-left:1px solid #e1eaf6}
+    .trust strong{display:block;color:#168cff;font-size:25px}
+    section{padding:65px 7%}
+    .section-title{text-align:center;margin-bottom:35px}
+    .section-title h2{font-size:30px;margin-bottom:8px}
+    .section-title p{color:#64748b}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:white;border:1px solid #e2eaf5;border-radius:17px;padding:24px;box-shadow:0 8px 25px rgba(30,70,120,.06)}
+    .card .icon{font-size:30px;color:#168cff;margin-bottom:10px}
+    .card h3{font-size:17px;margin-bottom:8px}
+    .card p{font-size:13px;color:#64748b}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .step{text-align:center;background:#eaf3ff;border-radius:16px;padding:22px}
+    .step b{display:inline-grid;place-items:center;width:38px;height:38px;background:#168cff;color:white;border-radius:50%;margin-bottom:10px}
+    .order{background:#061426;color:white}
+    form{max-width:750px;margin:auto;background:white;color:#102040;padding:28px;border-radius:20px;display:grid;gap:15px}
+    label{font-size:14px;font-weight:bold}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #d4dfef;border-radius:10px;font-family:inherit;margin-top:5px}
+    textarea{min-height:120px;resize:vertical}
+    footer{background:#03101f;color:#d8e7fb;padding:28px 7%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin:0 auto 25px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+    @media(max-width:520px){.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.hero{padding:45px 6%}section{padding:45px 6%}.trust{padding:20px 6%}}
+  </style>
 </head>
 <body>
-<nav>
-<div class="logo">VALCORE AI</div>
-<div><a href="#services">خدمات</a><a href="#portfolio">نمونه‌کار</a><a href="#order">ثبت سفارش</a></div>
-</nav>
-
-<header class="hero">
-<div class="badge">استودیو گرافیک و هوش مصنوعی</div>
-<h1>ایده‌ات را به <span>واقعیت</span> تبدیل کن</h1>
-<p>طراحی لوگو، پوستر، بنر تبلیغاتی و محتوای حرفه‌ای با سبک مدرن، نئونی و سایبرپانک.</p>
-<a class="btn" href="#order">ثبت سفارش</a>
-<a class="btn alt" href="#services">مشاهده خدمات</a>
+<header>
+  <a class="logo" href="#">VAL<span>CORE</span></a>
+  <nav>
+    <a href="#services">خدمات</a>
+    <a href="#steps">مراحل کار</a>
+    <a href="#order">ثبت درخواست</a>
+    <a href="#faq">سؤالات متداول</a>
+  </nav>
+  <a class="btn" href="#order">ثبت سفارش</a>
 </header>
 
-<section id="services">
-<h2 class="title">خدمات ما</h2>
-<div class="grid">
-<div class="card"><h3>طراحی لوگو</h3><p>ساخت لوگوهای اختصاصی و حرفه‌ای برای برندها و پیج‌ها.</p></div>
-<div class="card"><h3>بنر تبلیغاتی</h3><p>بنرهای جذاب برای تبلیغات، فروشگاه‌ها و شبکه‌های اجتماعی.</p></div>
-<div class="card"><h3>طراحی کاور</h3><p>کاور گیمینگ، پروفایل و محتوای دیجیتال با ظاهر خاص.</p></div>
-<div class="card"><h3>VALCORE AI</h3><p>ایده‌پردازی و کمک هوش مصنوعی برای تولید محتوای خلاقانه.</p></div>
-</div>
-</section>
+<main>
+  <section class="hero">
+    <div>
+      <small>ارائه‌دهنده خدمات پشتیبانی و پیگیری حساب‌ها</small>
+      <h1>رفع تعلیق <span>روبیکا</span><br>و شبکه‌های اجتماعی</h1>
+      <p>برای بررسی مشکل حساب، آماده‌سازی درخواست اعتراض و راهنمایی مسیر پشتیبانی در کنار شما هستیم؛ بدون وعده قطعی یا دور زدن قوانین پلتفرم.</p>
+      <a class="btn" href="#order">ثبت درخواست رفع تعلیق</a>
+      <a class="btn secondary" href="#services">مشاهده خدمات</a>
+    </div>
+    <div class="hero-card">
+      <div class="symbol">✓</div>
+      <h2>پشتیبانی حرفه‌ای VALCORE</h2>
+      <p>بررسی اولیه، راهنمایی و پیگیری شفاف</p>
+    </div>
+  </section>
 
-<section id="portfolio">
-<h2 class="title">نمونه‌کارها</h2>
-<div class="grid">
-<div class="card"><h3>هویت بصری</h3><p>طراحی برند با ترکیب مشکی و آبی نئونی.</p></div>
-<div class="card"><h3>پوستر سایبرپانک</h3><p>پوسترهای آینده‌نگر با نورپردازی جذاب.</p></div>
-<div class="card"><h3>پکیج شبکه اجتماعی</h3><p>طراحی مجموعه‌ای هماهنگ برای صفحه شما.</p></div>
-</div>
-</section>
+  <div class="trust">
+    <div><strong>۱</strong>بررسی اولیه درخواست</div>
+    <div><strong>۲</strong>ارتباط شفاف</div>
+    <div><strong>۳</strong>راهنمایی مرحله‌به‌مرحله</div>
+    <div><strong>۴</strong>پشتیبانی پاسخ‌گو</div>
+  </div>
 
-<section id="order">
-<div class="order">
-<h2 class="title">ثبت سفارش</h2>
-<p>برای ثبت سفارش، نوع طراحی و توضیحات موردنیازت را در روبیکا ارسال کن.</p>
-<a class="btn" href="https://rubika.ir/" target="_blank">ارتباط در روبیکا</a>
-<p style="margin-top:15px;color:#91aac8;font-size:13px">لینک روبیکای اختصاصی خودت را می‌توانی جایگزین کنی.</p>
-</div>
-</section>
+  <section id="services">
+    <div class="section-title"><h2>خدمات ما</h2><p>خدمات کاربردی برای مشکلات حساب و شبکه‌های اجتماعی</p></div>
+    <div class="cards">
+      <article class="card"><div class="icon">◈</div><h3>رفع تعلیق روبیکا</h3><p>بررسی وضعیت حساب و راهنمایی برای ارسال درخواست اعتراض از مسیر رسمی.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>رفع محدودیت تلگرام</h3><p>راهنمایی برای بررسی محدودیت‌ها و استفاده از روش‌های رسمی پشتیبانی.</p></article>
+      <article class="card"><div class="icon">◉</div><h3>رفع محدودیت اینستاگرام</h3><p>کمک در آماده‌سازی توضیحات و پیگیری درخواست بازبینی حساب.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>رفع محدودیت واتساپ</h3><p>بررسی مشکل و ارائه راهنمایی برای تماس با پشتیبانی رسمی.</p></article>
+      <article class="card"><div class="icon">✉</div><h3>بازگردانی دسترسی</h3><p>راهنمایی عمومی برای مشکلات ورود، بازیابی و امنیت حساب.</p></article>
+      <article class="card"><div class="icon">✓</div><h3>امنیت حساب</h3><p>نکات افزایش امنیت و جلوگیری از تکرار محدودیت‌های قابل پیشگیری.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3>بررسی درخواست</h3><p>مرور متن درخواست شما و پیشنهاد اصلاحات برای شفاف‌تر شدن توضیحات.</p></article>
+      <article class="card"><div class="icon">?</div><h3>مشاوره پشتیبانی</h3><p>پاسخ به پرسش‌های عمومی درباره روند پیگیری و مراحل بعدی.</p></article>
+    </div>
+  </section>
 
-<footer>© 2026 VALCORE AI — تمامی حقوق محفوظ است.</footer>
+  <section id="steps">
+    <div class="section-title"><h2>مراحل انجام کار</h2><p>چهار مرحله ساده برای شروع</p></div>
+    <div class="steps">
+      <div class="step"><b>۱</b><h3>ثبت درخواست</h3><p>فرم را با اطلاعات لازم تکمیل کنید.</p></div>
+      <div class="step"><b>۲</b><h3>بررسی اولیه</h3><p>جزئیات مشکل بررسی می‌شود.</p></div>
+      <div class="step"><b>۳</b><h3>راهنمایی</h3><p>مراحل پیشنهادی به شما اعلام می‌شود.</p></div>
+      <div class="step"><b>۴</b><h3>پیگیری</h3><p>در صورت امکان، روند درخواست را پیگیری می‌کنیم.</p></div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="section-title"><h2>ثبت درخواست</h2><p>اطلاعات حساس مانند رمز عبور و کد ورود را وارد نکنید.</p></div>
+    <form onsubmit="submitForm(event)">
+      <label>نام و نام خانوادگی<input required name="name" placeholder="نام شما"></label>
+      <label>راه ارتباطی<input required name="contact" placeholder="آیدی یا شماره تماس"></label>
+      <label>نوع خدمت<select required name="service"><option value="">انتخاب کنید</option><option>رفع تعلیق روبیکا</option><option>رفع محدودیت تلگرام</option><option>رفع محدودیت اینستاگرام</option><option>رفع محدودیت واتساپ</option><option>مشاوره پشتیبانی</option></select></label>
+      <label>توضیحات مشکل<textarea required name="details" placeholder="مشکل حساب خود را توضیح دهید..."></textarea></label>
+      <button class="btn" type="submit">ارسال درخواست</button>
+      <p id="message" style="font-size:13px;color:#168cff"></p>
+    </form>
+  </section>
+
+  <section id="faq">
+    <div class="section-title"><h2>سؤالات متداول</h2></div>
+    <div class="cards">
+      <article class="card"><h3>آیا رفع تعلیق قطعی است؟</h3><p>خیر؛ تصمیم نهایی با پلتفرم است و هیچ نتیجه‌ای نباید قطعی وعده داده شود.</p></article>
+      <article class="card"><h3>آیا رمز عبور لازم است؟</h3><p>خیر. رمز عبور، کد ورود و اطلاعات خصوصی خود را در اختیار دیگران قرار ندهید.</p></article>
+      <article class="card"><h3>چقدر زمان می‌برد؟</h3><p>زمان پاسخ‌گویی به نوع مشکل و پشتیبانی پلتفرم بستگی دارد.</p></article>
+      <article class="card"><h3>چطور پشتیبانی بگیرم؟</h3><p>از فرم ثبت درخواست استفاده کنید تا راه ارتباطی مناسب اعلام شود.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div><strong>VALCORE</strong><br>اعتماد شما، اعتبار ماست.</div>
+  <div>خدمات | ثبت درخواست | پشتیبانی | سؤالات متداول</div>
+  <div>© 2026 VALCORE</div>
+</footer>
+
+<script>
+function submitForm(event){
+  event.preventDefault();
+  document.getElementById('message').textContent =
+    'فرم نمونه با موفقیت آماده شد. برای دریافت واقعی درخواست‌ها باید فرم را به یک سرویس یا سرور متصل کنیم.';
+}
+</script>
 </body>
 </html>
